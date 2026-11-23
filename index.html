@@ -540,19 +540,13 @@
 <link rel="manifest" href="/manifest.webmanifest">
 <script src="/castor/analytics.js?v=family1" data-site="castor" defer></script>
 <style>
-.topic-kuku .topic-media {
-  background: radial-gradient(ellipse at center, #fff4dc 15%, #e9b97f 100%);
-}
-.topic-kuku .topic-media::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("/castor/assets/kuku-illustrated-cover.svg") center / cover no-repeat;
-  opacity: .42;
-  filter: blur(14px);
-}
-.topic-kuku .topic-media > img { position: relative; }
-.topic-slide.is-active .topic-kuku .topic-media { animation: none; }
+.typing-cover{position:relative;display:block;aspect-ratio:7/8;overflow:hidden;background:#f6e5cc}
+.typing-cover .typing-cover-art{display:block;width:100%;height:100%;object-fit:cover}
+.typing-cover .typing-cover-logo{position:absolute;display:block;top:2%;left:21%;width:58%;height:auto;object-fit:contain;pointer-events:none}
+.topic-typing .topic-media{display:grid;place-items:center;background:radial-gradient(ellipse,#f9e7cd,#b97849)}
+.topic-typing .topic-media::before{content:"";position:absolute;inset:0;background:url("/castor/assets/typing-kitchen-keyvisual.webp") center / cover no-repeat;opacity:.33;filter:blur(14px)}
+.topic-typing .typing-cover{height:100%;width:auto;max-width:100%}
+.topic-slide.is-active .topic-typing .topic-media{animation:none}
 .footer-meta { flex-wrap: wrap; }
 </style>
 <style>
@@ -581,9 +575,9 @@
 <div class="topics-heading"><h2>TOPICS</h2><span class="topic-count" aria-hidden="true">01 / 03</span></div>
 <div class="topics-window"><div class="topics-track">
 <article class="topic-slide" role="group" aria-roledescription="スライド" aria-label="1 / 3">
-<a class="topic-link" href="https://kairi-studio.github.io/kuku-collect/" target="_blank" rel="noopener noreferrer">
-<div class="topic-art topic-kuku"><div class="topic-media" style="height:100%"><img src="/castor/assets/kuku-illustrated-cover.svg" width="600" height="680" alt="九九コレクト。おへやに集まったぽてまる、すみすけ、ちくり" style="width:100%;height:100%;object-fit:contain"></div></div>
-<span class="topic-category">CREATE / GAME RELEASE</span><h3>九九コレクト リリース</h3><p>九九をおぼえて、なかまをあつめよう！<br>九九の言い方と穴うめを楽しむ無料学習ゲーム。</p><span class="topic-cta">無料であそぶ ↗</span></a></article>
+<a class="topic-link" href="/castor/typing-kitchen.html">
+<div class="topic-art topic-typing"><div class="topic-media"><div class="typing-cover"><img class="typing-cover-art" src="/castor/assets/typing-kitchen-keyvisual.webp" width="840" height="960" alt="洋食店のアナグマ、キツネ、クマが、キーボードの向こうでオムライスを差し出す" fetchpriority="high"><img class="typing-cover-logo" src="https://kairi-studio.github.io/typing-kitchen/assets/diner-title-logo.webp" width="780" height="520" alt="" decoding="async"></div></div></div>
+<span class="topic-category">CREATE / GAME RELEASE</span><h3>タイピングキッチン リリース</h3><p>ローマ字を うって、料理を とどけよう！<br>あそべるのは パソコンだけ。</p><span class="topic-cta">ゲームの紹介を見る</span></a></article>
 <article class="topic-slide" role="group" aria-roledescription="スライド" aria-label="2 / 3" aria-hidden="true" inert>
 <a class="topic-link" href="https://www.youtube.com/shorts/wT3x33tB3xw" target="_blank" rel="noopener noreferrer">
 <div class="topic-art topic-video"><div class="topic-media"><img src="https://i.ytimg.com/vi/wT3x33tB3xw/hqdefault.jpg" alt="HBKチャンネル「たまたま親子対決!!」のサムネイル" referrerpolicy="no-referrer"><span class="topic-play" aria-hidden="true">▶</span></div></div>
@@ -594,7 +588,7 @@
 <span class="topic-category">STORE / PICK UP</span><h3>CASTOR ベースボールキャップ</h3><p>カーキに、白いCSTロゴの刺繍。<br>街でも海辺でも、いつものスタイルに。</p><span class="topic-cta">ストアで見る ↗</span></a></article>
 </div></div>
 <div class="topic-progress" aria-hidden="true"><span></span></div>
-<div class="topics-controls"><div class="topic-dots" role="group" aria-label="表示するトピック"><button class="topic-dot" type="button" aria-label="九九コレクトを表示" aria-current="true"></button><button class="topic-dot" type="button" aria-label="HBKのピックアップ動画を表示" aria-current="false"></button><button class="topic-dot" type="button" aria-label="ベースボールキャップを表示" aria-current="false"></button></div><button class="topic-pause" type="button" aria-label="自動切り替えを一時停止">一時停止</button></div>
+<div class="topics-controls"><div class="topic-dots" role="group" aria-label="表示するトピック"><button class="topic-dot" type="button" aria-label="タイピングキッチンを表示" aria-current="true"></button><button class="topic-dot" type="button" aria-label="HBKのピックアップ動画を表示" aria-current="false"></button><button class="topic-dot" type="button" aria-label="ベースボールキャップを表示" aria-current="false"></button></div><button class="topic-pause" type="button" aria-label="自動切り替えを一時停止">一時停止</button></div>
 </aside>
 </section>
 <section class="section play" id="play"><div class="wrap section-inner"><div class="play-head"><div><div class="section-label">01 / PLAY</div><h2>PLAY</h2><p class="play-intro">家族3人でApex Legendsを楽しむ、HBK_GAMING。</p><a class="play-channel" href="https://www.youtube.com/@hbk-gaming-jp" target="_blank" rel="noopener noreferrer">HBKの動画をYouTubeで見る ↗</a></div><img class="hbk-logo" src="/castor/assets/hbk-gaming-logo.webp" width="510" height="510" loading="lazy" decoding="async" alt=""></div><div class="team-grid"><article class="team-card"><a class="team-card-link" href="/castor/kairi.html" aria-label="kairiのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-kairi.webp" loading="lazy" decoding="async" alt="kairi"></div><div class="team-meta"><span>HBK_GAMING</span><strong>kairi</strong><small class="team-role">父 / FATHER</small></div></a></article><article class="team-card"><a class="team-card-link" href="/castor/kappa.html" aria-label="kappaのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-kappa.webp" loading="lazy" decoding="async" alt="kappa"></div><div class="team-meta"><span>HBK_GAMING</span><strong>kappa</strong><small class="team-role">母 / MOTHER</small></div></a></article><article class="team-card"><a class="team-card-link" href="/castor/sota.html" aria-label="sotaのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-sota.webp" loading="lazy" decoding="async" alt="sota"></div><div class="team-meta"><span>HBK_GAMING</span><strong>sota</strong><small class="team-role">息子 / SON</small></div></a></article></div></div></section>
