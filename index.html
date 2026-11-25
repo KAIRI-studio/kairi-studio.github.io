@@ -509,22 +509,70 @@
   .hero-description{grid-row:4}
 }
 
-.create-gallery{display:block;width:100%;max-width:530px;margin-inline:auto;padding:clamp(12px,2vw,26px);border:1px solid var(--line);border-radius:6px;background:rgba(12,26,46,.42);transition:border-color .25s ease,background-color .25s ease}
-.create-gallery-logo{display:block;width:min(68%,230px);max-height:66px;object-fit:contain;object-position:left center;margin-bottom:clamp(14px,2vw,24px);filter:brightness(0) invert(1)}
-.create-games{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(7px,1vw,13px)}
-.create-art{position:relative;display:block;overflow:hidden;aspect-ratio:7/8;border-radius:3px;background:#172b49}
-.create-art>img{display:block;width:100%;height:100%;object-fit:contain}
-.create-art.cactus-art{background:#466345 url("/castor/assets/cactus-factory-background.webp") center 57%/cover no-repeat}
-.create-art .cactus-logo{position:absolute;top:9%;left:9%;width:82%;height:auto}
-.create-cactus-cast{position:absolute;inset:auto 7% 12%;height:33%;display:flex;justify-content:center;gap:3%}
-.create-cactus-cast img{width:31%;height:100%;object-fit:contain;object-position:center bottom}
-.create-gallery-label{display:flex;justify-content:flex-end;gap:8px;margin-top:clamp(12px,1.5vw,19px);font-size:13px;color:var(--accent)}
-.create-gallery:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-@media(hover:hover) and (pointer:fine){
- .create-gallery:hover{border-color:var(--accent);background-color:rgba(185,210,244,.11)}
- .create-gallery:hover .create-gallery-label{color:#fff}
+.create-gallery {
+  width: 100%;
+  max-width: 570px;
+  margin-inline: auto;
 }
-@media(prefers-reduced-motion:reduce){.create-gallery{transition:none}}
+.create-games {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.create-game {
+  display: grid;
+  grid-template-columns: clamp(70px, 7vw, 96px) minmax(0, 1fr) auto;
+  gap: clamp(12px, 1.5vw, 20px);
+  align-items: center;
+  padding: 10px 17px 10px 10px;
+  color: #f3f7ff;
+  border: 1px solid rgba(190, 211, 243, .25);
+  border-radius: 6px;
+  background: rgba(13, 29, 51, .46);
+  text-decoration: none;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.create-art {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 7 / 8;
+  border-radius: 3px;
+  background: #172b49;
+}
+.create-art > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.create-art.cactus-art { background: #466345 url("/castor/assets/cactus-factory-background.webp") center 57% / cover no-repeat; }
+.create-art .cactus-logo { position: absolute; top: 9%; left: 9%; width: 82%; height: auto; }
+.create-cactus-cast { position: absolute; inset: auto 7% 12%; height: 33%; display: flex; justify-content: center; gap: 3%; }
+.create-cactus-cast img { width: 31%; height: 100%; object-fit: contain; object-position: center bottom; }
+.create-game-copy { min-width: 0; }
+.create-game-topic { display: block; margin-bottom: 4px; color: #b8d1ef; font-size: 11px; letter-spacing: .06em; }
+.create-game h3 { margin: 0 0 4px; font-size: clamp(16px, 1.65vw, 23px); line-height: 1.35; }
+.create-game .create-game-description { display: block; color: #dae5f3; font-size: clamp(12px, 1.1vw, 14px); line-height: 1.6; }
+.create-game-arrow { color: #c8ddf8; font-size: 20px; line-height: 1; }
+.create-gallery-label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  min-height: 44px;
+  margin: 10px 0 0 auto;
+  color: #e0edff;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: .28em;
+}
+.create-gallery a:focus-visible { outline: 2px solid #e0edff; outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .create-game:hover { border-color: #b8d1ef; background: rgba(185, 210, 244, .11); }
+  .create-gallery-label:hover { color: #fff; }
+}
+@media (max-width: 900px) { .create-gallery { margin-inline: 0; } }
+@media (max-width: 440px) { .create-game { grid-template-columns: 62px minmax(0, 1fr) auto; gap: 10px; padding: 9px 12px 9px 9px; } }
+@media (prefers-reduced-motion: reduce) { .create-game { transition: none; } }
 /* Readable controls and keyboard navigation within the existing layout. */
 .skip-link{position:absolute;top:8px;left:16px;z-index:1;padding:12px 16px;background:#152640;color:#fff;transform:translateY(-150%)}
 .skip-link:focus{transform:translateY(0)}
@@ -592,23 +640,62 @@
 </aside>
 </section>
 <section class="section play" id="play"><div class="wrap section-inner"><div class="play-head"><div><div class="section-label">01 / PLAY</div><h2>PLAY</h2><p class="play-intro">家族3人でApex Legendsを楽しむ、HBK_GAMING。</p><a class="play-channel" href="https://www.youtube.com/@hbk-gaming-jp" target="_blank" rel="noopener noreferrer">HBKの動画をYouTubeで見る ↗</a></div><img class="hbk-logo" src="/castor/assets/hbk-gaming-logo.webp" width="510" height="510" loading="lazy" decoding="async" alt=""></div><div class="team-grid"><article class="team-card"><a class="team-card-link" href="/castor/kairi.html" aria-label="kairiのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-kairi.webp" loading="lazy" decoding="async" alt="kairi"></div><div class="team-meta"><span>HBK_GAMING</span><strong>kairi</strong><small class="team-role">父 / FATHER</small></div></a></article><article class="team-card"><a class="team-card-link" href="/castor/kappa.html" aria-label="kappaのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-kappa.webp" loading="lazy" decoding="async" alt="kappa"></div><div class="team-meta"><span>HBK_GAMING</span><strong>kappa</strong><small class="team-role">母 / MOTHER</small></div></a></article><article class="team-card"><a class="team-card-link" href="/castor/sota.html" aria-label="sotaのページを見る"><span class="card-trace" aria-hidden="true"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><rect x=".5" y=".5" width="99" height="99" pathLength="100"/></svg></span><div class="team-photo"><img src="/castor/assets/hbk-sota.webp" loading="lazy" decoding="async" alt="sota"></div><div class="team-meta"><span>HBK_GAMING</span><strong>sota</strong><small class="team-role">息子 / SON</small></div></a></article></div></div></section>
-<section class="section create" id="create"><div class="wrap section-inner"><div class="create-content"><div class="create-copy"><div class="section-label">02 / CREATE</div><h2>CREATE</h2><p>小学生向けの無料学習ゲームをつくる KAIRI_studio。<br>漢字の読み・九九・算数の計算・社会の知識・アルファベットを、遊びながら学べます。</p></div><a class="create-gallery" href="/castor/kairi-studio.html" aria-label="KAIRI_studioの学習ゲーム一覧へ">
-  <img class="create-gallery-logo" src="/castor/assets/kairi-studio-logo.png" alt="" loading="lazy" decoding="async">
-  <div class="create-games" aria-hidden="true">
-      <div class="create-art"><img src="/castor/assets/kanji-quest-keyvisual-card.webp" alt="" width="1173" height="1341" loading="lazy" decoding="async"></div>
-      <div class="create-art cactus-art" aria-hidden="true">
-        <img class="cactus-logo" src="/castor/assets/cactus-factory-logo.webp" alt="" width="1619" height="971" loading="lazy" decoding="async">
-        <div class="create-cactus-cast">
-          <img src="/castor/assets/cactus-factory-punk.png" alt="" width="1187" height="1325" loading="lazy" decoding="async">
-          <img src="/castor/assets/cactus-factory-normal.png" alt="" width="1150" height="1284" loading="lazy" decoding="async">
-          <img src="/castor/assets/cactus-factory-moon.png" alt="" width="1187" height="1325" loading="lazy" decoding="async">
-        </div>
+<section class="section create" id="create">
+  <div class="wrap section-inner">
+    <div class="create-content">
+      <div class="create-copy">
+        <div class="section-label">02 / CREATE</div>
+        <h2>CREATE</h2>
+        <p>小学生向けの無料学習ゲームをつくる KAIRI_studio。<br>国語・算数・社会・英語・タイピングを、遊びながら練習できます。</p>
       </div>
-      <div class="create-art"><img src="/castor/assets/sengoku-illustrated-cover.webp" alt="" width="600" height="680" loading="lazy" decoding="async"></div>
-      <div class="create-art"><img src="/castor/assets/kuku-illustrated-cover.webp" alt="" width="600" height="680" loading="lazy" decoding="async"></div>
+      <div class="create-gallery">
+        <ul class="create-games" aria-label="KAIRI_studioの代表作">
+          <li>
+            <a class="create-game" href="/castor/kanji-quest.html">
+              <span class="create-art" aria-hidden="true"><img src="/castor/assets/kanji-quest-keyvisual-card.webp" alt="" width="1173" height="1341" loading="lazy" decoding="async"></span>
+              <div class="create-game-copy">
+                <span class="create-game-topic">国語 · 小学1〜6年生</span>
+                <h3>漢字クエスト</h3>
+                <span class="create-game-description">学年を選んで、漢字の読みを1回10問。</span>
+              </div>
+              <span class="create-game-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="create-game" href="/castor/kuku-collect.html">
+              <span class="create-art" aria-hidden="true"><img src="/castor/assets/kuku-illustrated-cover.webp" alt="" width="600" height="680" loading="lazy" decoding="async"></span>
+              <div class="create-game-copy">
+                <span class="create-game-topic">算数 · 小学2年生ごろから</span>
+                <h3>九九コレクト</h3>
+                <span class="create-game-description">九九を聞いて唱え、穴うめで確かめる。</span>
+              </div>
+              <span class="create-game-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="create-game" href="/castor/cactus-factory.html">
+              <span class="create-art cactus-art" aria-hidden="true">
+                <img class="cactus-logo" src="/castor/assets/cactus-factory-logo.webp" alt="" width="1619" height="971" loading="lazy" decoding="async">
+                <span class="create-cactus-cast">
+                  <img src="/castor/assets/cactus-factory-punk.png" alt="" width="1187" height="1325" loading="lazy" decoding="async">
+                  <img src="/castor/assets/cactus-factory-normal.png" alt="" width="1150" height="1284" loading="lazy" decoding="async">
+                  <img src="/castor/assets/cactus-factory-moon.png" alt="" width="1187" height="1325" loading="lazy" decoding="async">
+                </span>
+              </span>
+              <div class="create-game-copy">
+                <span class="create-game-topic">算数 · 四則計算</span>
+                <h3>サボテン工場</h3>
+                <span class="create-game-description">たし算からわり算まで。時間制限なしも選べる。</span>
+              </div>
+              <span class="create-game-arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+        <a class="create-gallery-label" href="/castor/kairi-studio.html">学習ゲーム一覧へ <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </div>
-  <span class="create-gallery-label">学習ゲーム一覧へ <span aria-hidden="true">→</span></span>
-</a></div></div></section>
+</section>
 
 <section class="store-section" id="store" aria-label="CASTOR Official Store">
   <div class="wrap store-section-inner">
